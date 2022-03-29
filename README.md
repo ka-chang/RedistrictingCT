@@ -10,10 +10,10 @@ I conduct an ensemble analysis for the CT House of Representatives (151 district
 
 Each ensemble is generated from a random seed proposal with a ReCom proposal across 20,000 steps, which [previous](https://mggg.org/VA-report.pdf) [research](https://arxiv.org/abs/1911.05725) has noted as sufficient to reach a steady distribution. Town splits were minimized using an acceptance function that coerced the chain to only accept a next step with fewer town splits than the current step. The model and GerryChain runs can be viewed here.
 
-For CT State House maps, the ensemble mean of districts that contain a single incumbent is 54% compared to the 97% figure in the 2020 State House map. Another summary is that amongst 20,000 drawn plans in my ensemble, on average 46% of the drawn 151 CT House districts contain either no current incumbent or two or more incumbents within its new boundaries. This is compared to the 3% figure of the passed 2021 State House district maps, which indicates the 2021 CT State House map is an extreme outlier in terms of incumbent placement in newly drawn district boundaries.
+For CT State House maps, the ensemble mean of districts that contain a single incumbent is 54% compared to the 97% figure in the 2020 State House map. Another summary is that of the 20,000 drawn plans the ensemble, on average 46% of the drawn 151 CT House districts contain either no current incumbent or two or more incumbents within its new boundaries. This is compared to the 3% figure of the passed 2021 State House district maps, which indicates the 2021 CT State House map is an extreme outlier in terms of incumbent placement in newly drawn district boundaries.
 
-<img src="./outputs/ct_house_incumbents.png" style="background-color:white;" />
+<img src="./outputs/ct_house_incumbents.png" >
 
-<img src="./outputs/ct_house_incumbents_w2021.png" style="background-color:white;" />
+<img src="./outputs/ct_house_incumbents_w2021.png">
 
 
