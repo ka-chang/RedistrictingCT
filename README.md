@@ -10,16 +10,25 @@ The following analysis employs Markov Chain Monte Carlo (MCMC) methods to consid
 
 I conduct an ensemble analysis for the CT House of Representatives (151 districts) and the CT State Senate (36 districts) that tracks the count of incumbents that live within newly drawn districts. CT's redistricting legal rules require that district plans adhere to federal requirements (i.e., Voting Rights Act), equal population balance, that district shapes should be compact and contiguous, and that town splits are minimized where possible ("For the purpose of forming assembly districts no town shall be divided except for the purpose of forming assembly districts wholly within the town.") When accounting for legal rules and with *no* consideration for incumbent protection, I hypothesize that the percentage of current incumbents in the newly drawn CT House and CT Senate are lower than the 97% and 100% (respectively) reported incumbent figures in the 2021 redistricting maps.
 
-Each ensemble is generated from a random seed proposal with a ReCom proposal across 20,000 steps, which [previous](https://mggg.org/VA-report.pdf) [research](https://arxiv.org/abs/1911.05725) has noted as sufficient to reach a steady distribution. Town splits were minimized using an acceptance function that coerced the chain to only accept a next step with fewer town splits than the current step. The model and GerryChain runs can be viewed [here](https://github.com/ka-chang/RedistrictingCT/blob/main/03_gerrychain_ensemble.ipynb).
+Each ensemble is generated from a random seed proposal with a ReCom proposal across 20,000 steps, which [previous](https://mggg.org/VA-report.pdf) [research](https://arxiv.org/abs/1911.05725) has noted as sufficient to reach a steady distribution. Town splits were minimized using an acceptance function that coerced the chain to only accept a next step with fewer town splits than the current step, used alongside a [spanning tree algorithm that minimizes town splits, as described in Clelland et al. (2021, p. 16)](https://link.springer.com/article/10.1007/s42001-021-00119-7). The model and GerryChain runs can be viewed [here](https://github.com/ka-chang/RedistrictingCT/blob/main/03_gerrychain_ensemble.ipynb).
 
 ### State House
 
 <img src="./outputs/ct_house_incumbents.png" height="300"> <img src="./outputs/ct_house_incumbents_w2021.png" height="300">
 
-For CT State House maps, the ensemble mean of districts that contain a single incumbent is 54% compared to the 97% figure in the 2021 State House map. Another summary is that of the 20,000 proposed plans in the ensemble, on average 46% of the drawn 151 House districts contain either no current incumbent or two or more incumbents within its new boundaries. This is compared to the 3% figure of the passed 2021 State House district maps, which indicates the 2021 CT State House map is an extreme outlier in terms of incumbent placement in newly drawn district boundaries.
+For CT State House maps, the ensemble mean of districts that contain a single incumbent is 55% compared to the 97% figure in the 2021 State House map. Another summary is that of the 20,000 proposed plans in the ensemble, on average 45% of the drawn 151 House districts contain either no current incumbent or two or more incumbents within its new boundaries. This is contrasted with  the passed 2021 State House district maps where 97% of drawn districts contained a single existing incumbent. These results indicate the 2021 CT State House map is an extreme outlier in terms of incumbent placement in newly drawn district boundaries.
+
+<img src="./outputs/ct_house_town_w2021.png" height="300">
+
+The ensemble mean of town splits for the proposed CT State House  maps is 108 compared to the passed 2021 CT House Senate map which has 72 town splits. 
 
 ### State Senate
 
 <img src="./outputs/ct_senate_incumbents.png" height="300"> <img src="./outputs/ct_senate_incumbents_w2021.png" height="300">
 
-For CT State Senate maps, the ensemble mean of districts that contain a single incumbent is 47% compared to the 100% figure in the 2021 State Senate map. Another summary is that of the 20,000 proposed plans in the ensemble, on average 53% of the drawn 36 Senate districts contain either no current incumbent or two or more incumbents within its new boundaries. This is compared to the 0% figure of the passed 2021 State Senate district maps, which indicates the 2021 CT State Senate map is an extreme outlier in terms of incumbent placement in newly drawn district boundaries.
+For CT State Senate maps, the ensemble mean of districts that contain a single incumbent is 55% compared to the 100% figure in the 2021 State Senate map. Another summary is that of the 20,000 proposed plans in the ensemble, on average 45% of the drawn 36 Senate districts contain either no current incumbent or two or more incumbents within its new boundaries. This is contrasted with the passed 2021 State Senate district maps where 100% of drawn districts contained a single existing incumbent. These results indicate the 2021 CT State Senate map is an extreme outlier in terms of incumbent placement in newly drawn district boundaries.
+
+<img src="./outputs/ct_senate_town_w2021.png" height="300">
+
+The ensemble mean of town splits for the proposed CT State Senate maps is 36 compared to the passed 2021 CT State Senate map which had 38 town splits. These results indicate that the proposed plans can decrease single incumbent placement and minimize town splits, and that can computationally generated redistricting plans can match human-generated plans for town splits in this context.
+
