@@ -14,9 +14,17 @@ Each ensemble is generated from a random seed proposal with a ReCom proposal acr
 
 ### State House
 
-<img src="./outputs/ct_house_incumbents.png" height="300"> <img src="./outputs/ct_house_incumbents_w2021.png" height="300">
+**Figure 1.**
+
+<img src="./outputs/ct_house_incumbents.png" height="300"> 
+
+**Figure 2.**
+
+<img src="./outputs/ct_house_incumbents_w2021.png" height="300">
 
 For CT State House maps, the ensemble mean of districts that contain a single incumbent is 52.2% compared to the 97% figure in the 2021 State House map. Another summary is that of the 20,000 proposed plans in the ensemble, on average 47.8% of the drawn 151 House districts contain either no current incumbent or two or more incumbents within its new boundaries. This is contrasted with  the passed 2021 State House district maps where 97% of drawn districts contained a single existing incumbent. These results indicate the 2021 CT State House map is an extreme outlier in terms of incumbent placement in newly drawn district boundaries.
+
+**Figure 3.**
 
 <img src="./outputs/ct_house_town_w2021.png" height="300">
 
@@ -24,9 +32,17 @@ The ensemble mean of town splits for the proposed CT State House  maps is 108 co
 
 ### State Senate
 
-<img src="./outputs/ct_senate_incumbents.png" height="300"> <img src="./outputs/ct_senate_incumbents_w2021.png" height="300">
+**Figure 4.**
+
+<img src="./outputs/ct_senate_incumbents.png" height="300"> 
+
+**Figure 5.**
+
+<img src="./outputs/ct_senate_incumbents_w2021.png" height="300">
 
 For CT State Senate maps, the ensemble mean of districts that contain a single incumbent is 52.3% compared to the 100% figure in the 2021 State Senate map. Another summary is that of the 20,000 proposed plans in the ensemble, on average 47.7% of the drawn 36 Senate districts contain either no current incumbent or two or more incumbents within its new boundaries. This is contrasted with the passed 2021 State Senate district maps where 100% of drawn districts contained a single existing incumbent. These results indicate the 2021 CT State Senate map is an extreme outlier in terms of incumbent placement in newly drawn district boundaries.
+
+**Figure 6.**
 
 <img src="./outputs/ct_senate_town_w2021.png" height="300">
 
